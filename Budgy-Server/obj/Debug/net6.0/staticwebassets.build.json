@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sOiCXHlM15J/PGwNgq53uEmt7/oD1ZqCnaRe/1mrQpQ=",
+  "Source": "Budgy-Server",
+  "BasePath": "_content/Budgy-Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
