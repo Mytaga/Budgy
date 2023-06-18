@@ -1,0 +1,15 @@
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Core.deps.json
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Core.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Core.pdb
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.csproj.AssemblyReference.cache
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.AssemblyInfoInputs.cache
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.AssemblyInfo.cs
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.csproj.CoreCompileInputs.cache
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\refint\Budgy-Server.Core.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.pdb
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\ref\Budgy-Server.Core.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Infrastructure.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Infrastructure.pdb
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.csproj.CopyComplete

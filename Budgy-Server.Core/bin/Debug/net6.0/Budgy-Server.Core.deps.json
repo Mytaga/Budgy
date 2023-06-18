@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Budgy-Server.Core/1.0.0": {
+        "dependencies": {
+          "Budgy-Server.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "Budgy-Server.Core.dll": {}
+        }
+      },
+      "Budgy-Server.Infrastructure/1.0.0": {
+        "runtime": {
+          "Budgy-Server.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Budgy-Server.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Budgy-Server.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

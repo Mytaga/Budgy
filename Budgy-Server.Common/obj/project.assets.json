@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Budgy-Server.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Budgy-Server.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Budgy-Server.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Budgy-Server.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Budgy-Server.Infrastructure/Budgy-Server.Infrastructure.csproj",
+      "msbuildProject": "../Budgy-Server.Infrastructure/Budgy-Server.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Budgy-Server.Infrastructure >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\mitko\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\mitko\\Desktop\\Budgy\\Budgy-Server.Common\\Budgy-Server.Common.csproj",
+      "projectName": "Budgy-Server.Common",
+      "projectPath": "C:\\Users\\mitko\\Desktop\\Budgy\\Budgy-Server.Common\\Budgy-Server.Common.csproj",
+      "packagesPath": "C:\\Users\\mitko\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mitko\\Desktop\\Budgy\\Budgy-Server.Common\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\mitko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\mitko\\Desktop\\Budgy\\Budgy-Server.Infrastructure\\Budgy-Server.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\mitko\\Desktop\\Budgy\\Budgy-Server.Infrastructure\\Budgy-Server.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

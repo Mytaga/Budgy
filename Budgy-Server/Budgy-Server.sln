@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budgy-Server", "Budgy-Server.csproj", "{F6C732A9-60C8-4753-9F5A-2970800D4D03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Budgy-Server", "Budgy-Server.csproj", "{F6C732A9-60C8-4753-9F5A-2970800D4D03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budgy-Server.Core", "..\Budgy-Server.Core\Budgy-Server.Core.csproj", "{4AD28DC9-B284-4611-8011-49F573D77A80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budgy-Server.Infrastructure", "..\Budgy-Server.Infrastructure\Budgy-Server.Infrastructure.csproj", "{BD66770D-700B-4889-B0E1-21AD8A0EA136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budgy-Server.Common", "..\Budgy-Server.Common\Budgy-Server.Common.csproj", "{93642E12-9EBB-492B-AF5B-8F38DA56B253}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{F6C732A9-60C8-4753-9F5A-2970800D4D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6C732A9-60C8-4753-9F5A-2970800D4D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C732A9-60C8-4753-9F5A-2970800D4D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD28DC9-B284-4611-8011-49F573D77A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD28DC9-B284-4611-8011-49F573D77A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD28DC9-B284-4611-8011-49F573D77A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD28DC9-B284-4611-8011-49F573D77A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD66770D-700B-4889-B0E1-21AD8A0EA136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD66770D-700B-4889-B0E1-21AD8A0EA136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD66770D-700B-4889-B0E1-21AD8A0EA136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD66770D-700B-4889-B0E1-21AD8A0EA136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93642E12-9EBB-492B-AF5B-8F38DA56B253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93642E12-9EBB-492B-AF5B-8F38DA56B253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93642E12-9EBB-492B-AF5B-8F38DA56B253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93642E12-9EBB-492B-AF5B-8F38DA56B253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

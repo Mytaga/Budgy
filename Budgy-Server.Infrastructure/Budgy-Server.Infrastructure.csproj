@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Budgy_Server.Infrastructure</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Models\" />
+    <Folder Include="Data\Configurations\" />
+    <Folder Include="Data\Enums\" />
+    <Folder Include="Data\Common\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>
