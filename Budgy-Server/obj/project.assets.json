@@ -2436,6 +2436,9 @@
       "Budgy-Server.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.18"
+        },
         "compile": {
           "bin/placeholder/Budgy-Server.Infrastructure.dll": {}
         },
