@@ -13,3 +13,5 @@ C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\ref\Budgy-Server
 C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Infrastructure.dll
 C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Infrastructure.pdb
 C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\obj\Debug\net6.0\Budgy-Server.Core.csproj.CopyComplete
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Common.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server.Core\bin\Debug\net6.0\Budgy-Server.Common.pdb

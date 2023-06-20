@@ -1,6 +1,7 @@
-﻿using Budgy_Server.Infrastructure.Data.Common;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
+using static Budgy_Server.Common.ModelValidationConstants;
+
 
 namespace Budgy_Server.Infrastructure.Data.Models
 {
@@ -14,18 +15,23 @@ namespace Budgy_Server.Infrastructure.Data.Models
         }
 
         [Required]
+        [MaxLength(AppUserValidation.FirstNameMaxLength)]
         public string FirstName { get; set; } = null!;
 
         [Required]
+        [MaxLength(AppUserValidation.LasttNameMaxLength)]
         public string LastName { get; set; } = null!;
 
+        [MaxLength(AppUserValidation.ImageUrlMaxLength)]
         public string? ImageUrl { get; set; } 
 
         [Required]
         public decimal Balance { get; set; } = 0;
 
-        public ICollection<Transaction> Transactions { get; set; }
+        public bool IsDeleted { get; set; } = false;
 
-        public ICollection<Credit> Credits { get; set; }
+        public virtual ICollection<Transaction> Transactions { get; set; }
+
+        public virtual ICollection<Credit> Credits { get; set; }
     }
 }

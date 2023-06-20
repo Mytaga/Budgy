@@ -2420,6 +2420,16 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "Budgy-Server.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Budgy-Server.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Budgy-Server.Common.dll": {}
+        }
+      },
       "Budgy-Server.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2437,7 +2447,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.18"
+          "Budgy-Server.Common": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.18",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.18"
         },
         "compile": {
           "bin/placeholder/Budgy-Server.Infrastructure.dll": {}
@@ -7827,6 +7839,11 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "Budgy-Server.Common/1.0.0": {
+      "type": "project",
+      "path": "../Budgy-Server.Common/Budgy-Server.Common.csproj",
+      "msbuildProject": "../Budgy-Server.Common/Budgy-Server.Common.csproj"
     },
     "Budgy-Server.Core/1.0.0": {
       "type": "project",

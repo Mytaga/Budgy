@@ -2,6 +2,7 @@
 using Budgy_Server.Infrastructure.Data.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static Budgy_Server.Common.ModelValidationConstants;
 
 namespace Budgy_Server.Infrastructure.Data.Models
 {
@@ -14,7 +15,7 @@ namespace Budgy_Server.Infrastructure.Data.Models
         public TransactionType Type { get; set; }
 
         [Required]
-        public DateOnly Time { get; set; }
+        public static DateTime Time => DateTime.UtcNow;
 
         [Required]
         [ForeignKey(nameof(User))]
@@ -26,8 +27,9 @@ namespace Budgy_Server.Infrastructure.Data.Models
         [ForeignKey(nameof(Category))]
         public string CategoryId { get; set; } = null!;
 
-        public Category Category { get; set; } = null!;
+        public virtual Category Category { get; set; } = null!;
 
+        [MaxLength(TransactionValidation.DescriptionMaxLength)]
         public string Description { get; set; } = null!;
     }
 }

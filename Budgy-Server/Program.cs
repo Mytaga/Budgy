@@ -1,3 +1,4 @@
+using Budgy_Server.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -38,6 +39,14 @@ namespace Budgy_Server
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddApplicationServices();
+
+            builder.Services.AddDbContext(builder.Configuration);
+
+            builder.Services.AddIdentity();
+
+            builder.Services.ConfigureCors();
 
             var app = builder.Build();
 

@@ -13,10 +13,10 @@ namespace Budgy_Server.Infrastructure.Data.Models
         public decimal MonthlyPaymennt { get; set; }
 
         [Required]
-        public DateOnly DueDate { get; set; }
+        public DateTime DueDate { get; set; }
 
         [Required]
-        public DateOnly StartDate { get; set; }
+        public DateTime StartDate { get; set; }
 
         [Required]
         [ForeignKey(nameof(User))]

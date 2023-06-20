@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Budgy-Server.Infrastructure\Budgy-Server.Infrastructure.csproj" />
-  </ItemGroup>
-
 </Project>
