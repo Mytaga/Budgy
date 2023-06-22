@@ -19,7 +19,7 @@ namespace Budgy_Server.Infrastructure.Data.Models
         public string FirstName { get; set; } = null!;
 
         [Required]
-        [MaxLength(AppUserValidation.LasttNameMaxLength)]
+        [MaxLength(AppUserValidation.LastNameMaxLength)]
         public string LastName { get; set; } = null!;
 
         [MaxLength(AppUserValidation.ImageUrlMaxLength)]

@@ -1,4 +1,6 @@
-﻿using Budgy_Server.Infrastructure.Data;
+﻿using Budgy_Server.Core.Contracts;
+using Budgy_Server.Core.Services;
+using Budgy_Server.Infrastructure.Data;
 using Budgy_Server.Infrastructure.Data.Common;
 using Budgy_Server.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Identity;
@@ -10,6 +12,8 @@ namespace Budgy_Server.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<IAccountService, AccountService>();
+
             return services;
         }
 

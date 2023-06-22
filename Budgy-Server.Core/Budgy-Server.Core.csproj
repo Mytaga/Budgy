@@ -8,12 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Budgy-Server.Infrastructure\Budgy-Server.Infrastructure.csproj" />
   </ItemGroup>
 
