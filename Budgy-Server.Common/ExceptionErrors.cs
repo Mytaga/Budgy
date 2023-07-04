@@ -1,4 +1,4 @@
-﻿namespace Budgy_Server.Controllers
+﻿namespace Budgy_Server.Common
 {
     public static class ExceptionErrors
     {

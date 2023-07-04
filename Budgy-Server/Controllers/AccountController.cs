@@ -115,7 +115,7 @@ namespace Budgy_Server.Controllers
 
             try
             {
-                var result = await this.accountService.GetUserProfile(userId);
+                var result = await this.accountService.GetUserProfileAsync(userId);
 
                 return Ok(result);
             }
@@ -141,7 +141,7 @@ namespace Budgy_Server.Controllers
 
             try
             {
-                var result = await this.accountService.UpdateProfile(model, userId);
+                var result = await this.accountService.UpdateProfileAsync(model, userId);
 
                 return Ok(result);
             }

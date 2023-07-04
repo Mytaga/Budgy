@@ -54,7 +54,7 @@ namespace Budgy_Server.Core.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public async Task<UserProfileDto> GetUserProfile(string userId)
+        public async Task<UserProfileDto> GetUserProfileAsync(string userId)
         {
             var user = await this.userManager.FindByIdAsync(userId);
 
@@ -65,6 +65,7 @@ namespace Budgy_Server.Core.Services
                 LastName = user.LastName,
                 ImageUrl = user.ImageUrl,
                 Email = user.Email,
+                Balance = user.Balance.ToString("F2"),
             };
 
             return result;
@@ -86,7 +87,7 @@ namespace Budgy_Server.Core.Services
             return result;
         }
 
-        public async Task<UpdateUserProfileDto> UpdateProfile(UpdateUserProfileDto model, string userId)
+        public async Task<UpdateUserProfileDto> UpdateProfileAsync(UpdateUserProfileDto model, string userId)
         {
             var user = await this.userManager.FindByIdAsync(userId);
 

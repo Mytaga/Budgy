@@ -3,7 +3,6 @@ C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.Generate
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.AssemblyInfoInputs.cache
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.AssemblyInfo.cs
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.csproj.CoreCompileInputs.cache
-C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\appsettings.json

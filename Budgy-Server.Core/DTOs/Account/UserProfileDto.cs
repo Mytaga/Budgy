@@ -10,6 +10,8 @@
         
         public string Email { get; set; } = null!;
 
+        public string Balance { get; set; } = null!; 
+
         public string? ImageUrl { get; set; }
     }
 }

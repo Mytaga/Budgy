@@ -12,8 +12,8 @@ namespace Budgy_Server.Core.Contracts
 
         Task<IdentityResult> Register(RegisterDto model);
 
-        Task<UserProfileDto> GetUserProfile(string userId);
+        Task<UserProfileDto> GetUserProfileAsync(string userId);
 
-        Task<UpdateUserProfileDto> UpdateProfile(UpdateUserProfileDto model, string userId);
+        Task<UpdateUserProfileDto> UpdateProfileAsync(UpdateUserProfileDto model, string userId);
     }
 }
