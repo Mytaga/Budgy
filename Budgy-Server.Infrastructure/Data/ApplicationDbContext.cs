@@ -1,4 +1,5 @@
-﻿using Budgy_Server.Infrastructure.Data.Models;
+﻿using Budgy_Server.Infrastructure.Data.Configurations;
+using Budgy_Server.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,8 @@ namespace Budgy_Server.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.ApplyConfiguration(new CategoryConfiguration());
+
             base.OnModelCreating(builder);
         }
     }

@@ -28,13 +28,26 @@
 
         public static class TransactionValidation
         {
+            public const int DescriptionMinLength = 5;
             public const int DescriptionMaxLength = 100;
+
+            public const string AmountIsRequiredErrorMsg = "Amount is required!";
+            public const string TypeIsRequiredErrorMsg = "Type is required!";
+            public const string DescriptionMinLengthErrorMsg = "Description length must be at least 5 characters!";
+            public const string DescriptionMaxLengthErrorMsg = "Description length must be no more than 100 characters!";
         }
 
         public static class CategoryValidation
         {
+            public const int NameMinLength = 2;
             public const int NameMaxLength = 50;
             public const int ImageUrlMaxLength = 300;
+
+            public const string NameIsRequiredErrorMsg = "Name is required!";
+            public const string NameMinLengthErrorMsg = "Name length must be at least 5 characters!";
+            public const string NameMaxLengthErrorMsg = "Name length must be no more than 50 characters!";
+            public const string ImageUrlIsRequiredErrorMsg = "Image is required!";
+            public const string ImageUrlMaxLengthErrorMsg = "ImageUrl length must be no more than 300 characters!";
         }
     }
 }

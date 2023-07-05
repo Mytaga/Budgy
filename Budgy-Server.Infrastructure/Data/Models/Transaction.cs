@@ -15,7 +15,7 @@ namespace Budgy_Server.Infrastructure.Data.Models
         public TransactionType Type { get; set; }
 
         [Required]
-        public static DateTime Time => DateTime.UtcNow;
+        public DateTime Time { get; set; }
 
         [Required]
         [ForeignKey(nameof(User))]

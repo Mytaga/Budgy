@@ -7,7 +7,7 @@ namespace Budgy_Server.Core.Contracts
     {
         Task<decimal> GetBalanceAsync(string id);
 
-        Task<IEnumerable<TransactionDto>> GetTrasactionsAsync();
+        Task<AllTransactionsDto> GetTrasactionsAsync();
 
         Task<Transaction> GetByIdAsync(string id);
 
@@ -16,5 +16,7 @@ namespace Budgy_Server.Core.Contracts
         Task<Transaction> UpdateTransactionAsync(UpdateTransactionDto transaction);
 
         Task<Transaction> DeleteTransactionAsync(Transaction transaction);
+
+        Task<ICollection<ListTransactionCategories>> LoadCategoriesAsync(string id);
     }
 }
