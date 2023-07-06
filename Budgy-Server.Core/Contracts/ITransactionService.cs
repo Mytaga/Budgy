@@ -17,6 +17,6 @@ namespace Budgy_Server.Core.Contracts
 
         Task<Transaction> DeleteTransactionAsync(Transaction transaction);
 
-        Task<ICollection<ListTransactionCategories>> LoadCategoriesAsync(string id);
+        Task<ListTransactionCategories> LoadCategoriesAsync(string type);
     }
 }

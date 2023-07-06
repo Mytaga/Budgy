@@ -61,24 +61,46 @@ namespace Budgy_Server.Core.Services
 
             result.Transactions = await transactions
                 .Select(t => new TransactionDto
-            {
-                Id = t.Id,
-                Amount = t.Amount.ToString("F2"),
-                Type = t.Type.ToString(),
-                Time = t.Time.ToShortTimeString(),
-                UserId = t.UserId,
-                CategoryName = t.Category.Name,
-                Description = t.Description,
-            })
+                {
+                    Id = t.Id,
+                    Amount = t.Amount.ToString("F2"),
+                    Type = t.Type.ToString(),
+                    Time = t.Time.ToShortTimeString(),
+                    UserId = t.UserId,
+                    CategoryName = t.Category.Name,
+                    Description = t.Description,
+                })
                 .OrderByDescending(t => t.Time)
                 .ToListAsync();
 
             return result;
         }
 
-        public Task<ICollection<ListTransactionCategories>> LoadCategoriesAsync(string id)
+        public async Task<ListTransactionCategories> LoadCategoriesAsync(string type)
         {
-            throw new NotImplementedException();
+            var result = new ListTransactionCategories();
+
+            var categories = this.repository.AllReadonly<Category>().Where(c => c.IsDeleted == false);
+
+            if (type == Infrastructure.Data.Enums.TransactionType.Income.ToString())
+            {
+                categories = categories.Where(c => c.Type == Infrastructure.Data.Enums.TransactionType.Income);
+            }
+            else
+            {
+                categories = categories.Where(c => c.Type == Infrastructure.Data.Enums.TransactionType.Expense);
+            }
+
+            result.TransactionCategories = await categories
+                .Select(c => new TransactionCategory
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                })
+                .OrderBy(c => c.Name)
+                .ToListAsync();
+
+            return result;
         }
 
         public Task<Transaction> UpdateTransactionAsync(UpdateTransactionDto transaction)
