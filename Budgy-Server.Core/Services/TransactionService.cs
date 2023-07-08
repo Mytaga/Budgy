@@ -1,9 +1,9 @@
-﻿using Budgy_Server.Core.Contracts;
+﻿using Budgy_Server.Common;
+using Budgy_Server.Core.Contracts;
 using Budgy_Server.Core.DTOs.Transaction;
 using Budgy_Server.Infrastructure.Data.Common;
 using Budgy_Server.Infrastructure.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.InteropServices;
 
 namespace Budgy_Server.Core.Services
 {
@@ -57,24 +57,38 @@ namespace Budgy_Server.Core.Services
             return await this.repository.GetByIdAsync<Transaction>(id);
         }
 
-        public async Task<AllTransactionsDto> GetTrasactionsAsync()
+        public async Task<TransactionDetailsDto> GetTransactionDetailsAsync(string id)
+        {
+            var transaction = await this.repository.GetByIdAsync<Transaction>(id);
+
+            var result = new TransactionDetailsDto
+            {
+                Id = transaction.Id,
+                Amount = transaction.Amount.ToString("F2"),
+                Type = transaction.Type.ToString(),
+                Time = transaction.Time.ToShortTimeString(),
+                UserId = transaction.UserId,
+                CategoryName = transaction.Category.Name,
+                Description = transaction.Description,
+            };
+
+            return result;
+        }
+
+        public async Task<AllTransactionsDto> GetTrasactionsAsync(string userId)
         {
             var result = new AllTransactionsDto();
 
             var transactions = this.repository
                 .AllReadonly<Transaction>()
-                .Where(t => t.IsDeleted == false);
+                .Where(t => t.IsDeleted == false && t.UserId == userId);
 
             result.Transactions = await transactions
                 .Select(t => new TransactionDto
                 {
                     Id = t.Id,
                     Amount = t.Amount.ToString("F2"),
-                    Type = t.Type.ToString(),
                     Time = t.Time.ToShortTimeString(),
-                    UserId = t.UserId,
-                    CategoryName = t.Category.Name,
-                    Description = t.Description,
                 })
                 .OrderByDescending(t => t.Time)
                 .ToListAsync();

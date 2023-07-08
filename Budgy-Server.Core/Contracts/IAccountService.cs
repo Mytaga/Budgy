@@ -17,5 +17,7 @@ namespace Budgy_Server.Core.Contracts
         Task<UpdateUserProfileDto> UpdateProfileAsync(UpdateUserProfileDto model, string userId);
 
         Task<decimal> UpdateProfileBalanceAsync(string userId, decimal amount);
+
+        Task<bool> ExistByIdAsync(string userId);
     }
 }

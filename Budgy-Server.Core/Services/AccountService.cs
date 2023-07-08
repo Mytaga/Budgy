@@ -34,6 +34,18 @@ namespace Budgy_Server.Core.Services
             return null;
         }
 
+        public async Task<bool> ExistByIdAsync(string userId)
+        {
+            var user = await this.userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public string GenerateJSONWebToken(AppUser user)
         {
             var authClaims = new List<Claim>
