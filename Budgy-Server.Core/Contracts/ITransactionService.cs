@@ -11,9 +11,9 @@ namespace Budgy_Server.Core.Contracts
 
         Task<Transaction> GetByIdAsync(string id);
 
-        Task<Transaction> CreateTransactionAsync(CreateTransactionDto transaction);
+        Task<Transaction> CreateTransactionAsync(CreateTransactionDto model, string userId);
 
-        Task<Transaction> UpdateTransactionAsync(UpdateTransactionDto transaction);
+        Task<Transaction> UpdateTransactionAsync(UpdateTransactionDto model, string id, string userId);
 
         Task<Transaction> DeleteTransactionAsync(Transaction transaction);
 

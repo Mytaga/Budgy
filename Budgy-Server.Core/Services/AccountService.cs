@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Xml;
 
 namespace Budgy_Server.Core.Services
 {
@@ -99,6 +100,17 @@ namespace Budgy_Server.Core.Services
             await this.userManager.UpdateAsync(user);
 
             return model;
+        }
+
+        public async Task<decimal> UpdateProfileBalanceAsync(string userId, decimal amount)
+        {
+            var user = await this.userManager.FindByIdAsync(userId);
+
+            user.Balance += amount;
+
+            await this.userManager.UpdateAsync(user);
+
+            return user.Balance;
         }
     }
 }

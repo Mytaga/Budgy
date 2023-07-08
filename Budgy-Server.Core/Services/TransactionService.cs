@@ -3,32 +3,38 @@ using Budgy_Server.Core.DTOs.Transaction;
 using Budgy_Server.Infrastructure.Data.Common;
 using Budgy_Server.Infrastructure.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.InteropServices;
 
 namespace Budgy_Server.Core.Services
 {
     public class TransactionService : ITransactionService
     {
         private readonly IRepository repository;
+        private readonly IAccountService accountService;
 
-        public TransactionService(IRepository repository)
+        public TransactionService(IRepository repository, IAccountService accountService)
         {
             this.repository = repository;
+            this.accountService = accountService;
         }
 
-        public async Task<Transaction> CreateTransactionAsync(CreateTransactionDto transaction)
+        public async Task<Transaction> CreateTransactionAsync(CreateTransactionDto model, string userId)
         {
             var result = new Transaction
             {
-                Amount = transaction.Amount,
-                Type = transaction.Type,
+                Amount = model.Amount,
+                Type = model.Type,
                 Time = DateTime.UtcNow,
-                UserId = transaction.UserId,
-                CategoryId = transaction.CategoryId,
-                Description = transaction.Description,
+                UserId = model.UserId,
+                CategoryId = model.CategoryId,
+                Description = model.Description,
             };
+
+            await this.accountService.UpdateProfileBalanceAsync(userId, model.Amount);
 
             await this.repository.AddAsync(result);
             await this.repository.SaveChangesAsync();
+
             return result;
         }
 
@@ -103,9 +109,22 @@ namespace Budgy_Server.Core.Services
             return result;
         }
 
-        public Task<Transaction> UpdateTransactionAsync(UpdateTransactionDto transaction)
+        public async Task<Transaction> UpdateTransactionAsync(UpdateTransactionDto model, string id, string userId)
         {
-            throw new NotImplementedException();
+            var transaction = await this.repository.GetByIdAsync<Transaction>(id);
+
+            transaction.Amount = model.Amount;
+            transaction.Time = DateTime.UtcNow;
+            transaction.Type = model.Type;
+            transaction.CategoryId = model.CategoryId;
+            transaction.Description = model.Description;
+
+            await this.accountService.UpdateProfileBalanceAsync(userId, model.Amount);
+
+            this.repository.Update(transaction);
+            await this.repository.SaveChangesAsync();
+
+            return transaction;
         }
     }
 }
