@@ -8,5 +8,6 @@
         public const string ViewProfile = "ViewProfile action :";
         public const string Update = "Update :";
         public const string GetTransactions = "GetTransactions :";
+        public const string GetTransaction = "GetTransaction :";
     }
 }

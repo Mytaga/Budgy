@@ -1,5 +1,4 @@
-﻿using Budgy_Server.Common;
-using Budgy_Server.Core.Contracts;
+﻿using Budgy_Server.Core.Contracts;
 using Budgy_Server.Core.DTOs.Transaction;
 using Budgy_Server.Infrastructure.Data.Common;
 using Budgy_Server.Infrastructure.Data.Models;
@@ -43,6 +42,18 @@ namespace Budgy_Server.Core.Services
             transaction.IsDeleted = true;
             await this.repository.SaveChangesAsync();
             return transaction;
+        }
+
+        public async Task<bool> ExistByIdAsync(string id)
+        {
+            var transaction = await this.GetByIdAsync(id);
+
+            if (transaction == null)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public async Task<decimal> GetBalanceAsync(string id)

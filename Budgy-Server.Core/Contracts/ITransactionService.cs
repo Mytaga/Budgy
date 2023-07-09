@@ -20,5 +20,7 @@ namespace Budgy_Server.Core.Contracts
         Task<ListTransactionCategories> LoadCategoriesAsync(string type);
 
         Task<TransactionDetailsDto> GetTransactionDetailsAsync(string id);
+
+        Task<bool> ExistByIdAsync(string id);
     }
 }
