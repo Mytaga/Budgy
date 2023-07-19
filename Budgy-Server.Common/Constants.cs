@@ -9,5 +9,8 @@
         public const string Update = "Update :";
         public const string GetTransactions = "GetTransactions :";
         public const string GetTransaction = "GetTransaction :";
+        public const string CreateTransaction = "CreateTransaction :";
+        public const string UpdateTransaction = "UpdateTransaction :";
+        public const string DeleteTransaction = "DeleteTransaction :";
     }
 }

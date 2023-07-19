@@ -37,8 +37,9 @@ namespace Budgy_Server.Core.Services
             return result;
         }
 
-        public async Task<Transaction> DeleteTransactionAsync(Transaction transaction)
+        public async Task<Transaction> DeleteTransactionAsync(string id)
         {
+            var transaction = await this.GetByIdAsync(id);
             transaction.IsDeleted = true;
             await this.repository.SaveChangesAsync();
             return transaction;

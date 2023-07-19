@@ -1,6 +1,4 @@
-﻿using Budgy_Server.Infrastructure.Data.Enums;
-
-namespace Budgy_Server.Core.DTOs.Transaction
+﻿namespace Budgy_Server.Core.DTOs.Transaction
 {
     public class TransactionDto
     {
