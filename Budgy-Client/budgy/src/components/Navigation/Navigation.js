@@ -1,15 +1,18 @@
 import { NavDropdown, Nav, Navbar, Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/">BUDGY</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to={"/"} className="navbar-brand mt-2 mt-lg-0">BUDGY</Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Link to={"/"} className="nav-link">Home</Link>
+            <Link to={"/"} className="nav-link">Wallet</Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -23,12 +26,8 @@ export const Navigation = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="/login">
-              Login
-            </Nav.Link>
-            <Nav.Link href="/register">
-              Register
-            </Nav.Link>
+          <Link to={"/login"} className="nav-link">Login</Link>
+          <Link to={"/register"} className="nav-link">Register</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
