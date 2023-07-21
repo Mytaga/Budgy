@@ -1,0 +1,29 @@
+.register-form {
+    width: 40%;
+    margin:auto;
+    position: relative;
+    top: 100px;
+    background-color: rgb(187, 113, 128);
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: uppercase;
+    
+}
+
+.submit-btn{
+    background-color: white;
+    width: 50%;
+    color: rgb(187, 113, 128);
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 160px;
+}
+
+.register-label{
+    color: white;
+    font-weight: bold;
+}
