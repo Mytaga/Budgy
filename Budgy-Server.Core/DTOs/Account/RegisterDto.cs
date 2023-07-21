@@ -24,7 +24,6 @@ namespace Budgy_Server.Core.DTOs.Account
         [MaxLength(AppUserValidation.UsernameMaxLength, ErrorMessage = AppUserValidation.UsernameMaxLengthErrorMsg)]
         public string UserName { get; set; } = null!;
 
-
         [Required(ErrorMessage = AppUserValidation.FirstNameIsRequiredErrorMsg)]
         [MinLength(AppUserValidation.FirstNameMinLength, ErrorMessage = AppUserValidation.FirstNameMinLengthErrorMsg)]
         [MaxLength(AppUserValidation.FirstNameMaxLength, ErrorMessage = AppUserValidation.FirstNameMaxLengthErrorMsg)]

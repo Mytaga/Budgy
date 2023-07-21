@@ -80,3 +80,4 @@ C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Budgy-Server.Infrastr
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\appsettings.Production.json
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Budgy-Server.Common.dll
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Budgy-Server.Common.pdb
+C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.MvcApplicationPartsAssemblyInfo.cs

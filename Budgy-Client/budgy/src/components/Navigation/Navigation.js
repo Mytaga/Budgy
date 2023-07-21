@@ -30,9 +30,11 @@ export const Navigation = () => {
             <Link to={"/"} className={`${styles['icons']} nav-link`}>Credits and loans</Link>
             <Link to={"/"} className={`${styles['icons']} nav-link`}>Crypto</Link>
           </Nav>
-          <Nav>
+          <Nav className={styles['navbar-links']}>
             <Link to={"/login"} className={`${styles['icons']} nav-link`}>Login</Link>
             <Link to={"/register"} className={`${styles['icons']} nav-link`}>Register</Link>
+            <Link to={"/profile"} className={`${styles['icons']} nav-link`}>Profile</Link>
+            <Link to={"/logout"} className={`${styles['icons']} nav-link`}>Logout</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
