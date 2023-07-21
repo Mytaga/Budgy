@@ -1,33 +1,38 @@
 import { NavDropdown, Nav, Navbar, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import styles from "../Navigation/Navigation.module.css";
+
 
 export const Navigation = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+    <Navbar collapseOnSelect expand="lg" className={`${styles['navbar']} bg-body-tertiary`}>
       <Container>
         <Navbar.Brand>
-          <Link to={"/"} className="navbar-brand mt-2 mt-lg-0">BUDGY</Link>
+          <Link to={"/"} className={`${styles['icons-logo']} navbar-brand mt-2 mt-lg-0`}>BUDGY</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Link to={"/"} className="nav-link">Home</Link>
-            <Link to={"/"} className="nav-link">Wallet</Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+          <Nav className={`${styles['navbar-links']} me-auto`}>
+            <Link to={"/"} className={`${styles['icons']} nav-link`}>Home</Link>
+            <Link to={"/"} className={`${styles['icons']} nav-link`}>Wallet</Link>
+            <NavDropdown title={<span className={styles['icons']}>Transactions</span>} id="collasible-nav-dropdown">
+              <NavDropdown.Item className={styles['icons']}>
+                Make Transaction
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item className={styles['icons']}>
+                Transaction History
+              </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item className={styles['icons']}>
+                Reset Transactionss
               </NavDropdown.Item>
             </NavDropdown>
+            <Link to={"/"} className={`${styles['icons']} nav-link`}>Credits and loans</Link>
+            <Link to={"/"} className={`${styles['icons']} nav-link`}>Crypto</Link>
           </Nav>
           <Nav>
-          <Link to={"/login"} className="nav-link">Login</Link>
-          <Link to={"/register"} className="nav-link">Register</Link>
+            <Link to={"/login"} className={`${styles['icons']} nav-link`}>Login</Link>
+            <Link to={"/register"} className={`${styles['icons']} nav-link`}>Register</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
