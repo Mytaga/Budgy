@@ -32,3 +32,31 @@ export const logout = async (token) => {
         },
     });
 };
+
+export const getProfile = async (userId, token) => {
+    const response = await fetch(`${baseUrl}/${userId}`, {
+        method: 'GET',
+        headers: {
+            'authorization': `Bearer ${token}`,
+        },
+    });
+
+    const result = response.json();
+
+    return result;
+};
+
+export const editProfile = async (userId, userData, token) => {
+    const response = await fetch(`${baseUrl}/${userId}`, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json',
+            'authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify(userData)
+    });
+
+    const result  = response.json();
+
+    return result;
+};

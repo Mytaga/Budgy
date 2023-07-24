@@ -132,7 +132,7 @@ namespace Budgy_Server.Controllers
         [Produces("application/json")]
         [ProducesResponseType(200, StatusCode = StatusCodes.Status200OK, Type = typeof(UserProfileDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Update([FromBody] UpdateUserProfileDto model, string userId)
+        public async Task<IActionResult> Update(string userId, [FromBody] UpdateUserProfileDto model)
         {
             if (userId == null)
             {
