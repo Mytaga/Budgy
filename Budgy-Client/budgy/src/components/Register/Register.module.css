@@ -12,13 +12,13 @@
     position: relative;
     top: 50px;
     background-color: rgb(187, 113, 128);
-    padding: 50px;
+    padding: 30px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     text-transform: uppercase;  
 }
 
@@ -41,7 +41,7 @@
     color: white;
     font-weight: bold;
     position: relative;
-    top: -20px;
+    top: -5px;
     text-transform: initial;
 }
 
@@ -53,4 +53,13 @@
     color:black;
     font-family: bold;
     text-transform: uppercase;
+}
+
+.form-footer{
+    margin-top: 20px;
+}
+
+.footer-text{
+    color: white;
+    font-weight: bold;
 }

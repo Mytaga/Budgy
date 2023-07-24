@@ -40,3 +40,12 @@
 .login-group{
     width: 60%;
 }
+
+.form-footer{
+    margin-top: 10px;
+}
+
+.footer-text{
+    color: white;
+    font-weight: bold;
+}

@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { useForm } from "../../hooks/useForm";
 import { ErrorToast } from '../Errors/ErrorToast';
+import { Link } from "react-router-dom";
 import styles from '../Register/Register.module.css';
 
 export const Register = () => {
@@ -57,7 +58,6 @@ export const Register = () => {
                 errorMessage={errorMessage}
             />
             <Form className={styles['register-form']} onSubmit={onSubmit} method="POST">
-
                 <h3 className={styles['header']}>Sign Up</h3>
                 <Form.Group className={`${styles['register-group']} mb-3`}>
                     <Form.Label className={styles['register-label']}>Username</Form.Label>
@@ -148,6 +148,9 @@ export const Register = () => {
                 <Button className={styles['submit-btn']} variant="transparent" type="submit">
                     Register
                 </Button>
+                <div className={styles['form-footer']}>
+                <Link to={"/login"} className={styles['footer-text']}>Already registered?</Link>
+                </div>
             </Form>
         </div>
     );
