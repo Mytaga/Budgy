@@ -1,3 +1,8 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
 .first-section{
     height: 600px;
     background-color: rgb(163, 100, 113);
@@ -28,3 +33,10 @@
     font-size: 20px;
     background-color: white;
 }
+
+.second-section{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+

@@ -22,14 +22,20 @@ export const Navigation = () => {
             <Link to={"/"} className={`${styles['icons']} nav-link`}>Wallet</Link>
             <NavDropdown title={<span className={styles['icons']}>Transactions</span>} id="collasible-nav-dropdown">
               <NavDropdown.Item className={styles['icons']}>
-                Make Transaction
+                <Link to={"/create"} className={`${styles['icons']} nav-link`}>
+                  Make Transaction
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item className={styles['icons']}>
-                Transaction History
+                <Link to={"/transactions"} className={`${styles['icons']} nav-link`}>
+                  Transaction History
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item className={styles['icons']}>
-                Reset Transactionss
+                <Link to={"/delete"} className={`${styles['icons']} nav-link`}>
+                  Reset Transaction
+                </Link>
               </NavDropdown.Item>
             </NavDropdown>
             <Link to={"/"} className={`${styles['icons']} nav-link`}>Credits and loans</Link>
@@ -37,9 +43,9 @@ export const Navigation = () => {
           </Nav>
           <Nav className={styles['navbar-links']}>
             {!isAuthenticated && (<Link to={"/login"} className={`${styles['icons']} nav-link`}>Login</Link>)}
-            {!isAuthenticated && (<Link to={"/register"} className={`${styles['icons']} nav-link`}>Register</Link>)}     
-            {isAuthenticated && (<Link to={"/profile"} className={`${styles['icons']} nav-link`}>Profile</Link>)}       
-            {isAuthenticated && (<Link to={"/logout"} className={`${styles['icons']} nav-link`}>Logout</Link>)}           
+            {!isAuthenticated && (<Link to={"/register"} className={`${styles['icons']} nav-link`}>Register</Link>)}
+            {isAuthenticated && (<Link to={"/profile"} className={`${styles['icons']} nav-link`}>Profile</Link>)}
+            {isAuthenticated && (<Link to={"/logout"} className={`${styles['icons']} nav-link`}>Logout</Link>)}
           </Nav>
         </Navbar.Collapse>
       </Container>

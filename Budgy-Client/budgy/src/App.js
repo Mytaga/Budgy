@@ -7,6 +7,9 @@ import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
 import { Logout } from './components/Logout/Logout';
 import { AuthProvider } from './contexts/AuthContext';
+import { TransactionList } from './components/TransactionList/TransactionList';
+import { CreateTransaction } from './components/Transaction/CreateTransaction';
+import { DeleteTransaction } from './components/Transaction/DeleteTransaction';
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
         <main className='main'>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/transactions" element={<TransactionList />} />
+            <Route path="/create" element={<CreateTransaction />} />
+            <Route path="/delete" element={<DeleteTransaction />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
