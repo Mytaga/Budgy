@@ -57,10 +57,11 @@ namespace Budgy_Server
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("all");
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

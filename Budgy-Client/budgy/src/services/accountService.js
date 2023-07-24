@@ -1,4 +1,4 @@
-const baseUrl = 'https://localhost:5001/api/account/';
+const baseUrl = 'https://localhost:5001/api/account';
 
 export const login = async (userData) => {
     const response = await fetch(`${baseUrl}/login`, {

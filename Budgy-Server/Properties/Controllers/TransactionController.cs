@@ -6,7 +6,6 @@ using Budgy_Server.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Budgy_Server.Controllers
 {
