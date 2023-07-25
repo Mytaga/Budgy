@@ -1,0 +1,14 @@
+.create-form{
+    width: 30%;
+    padding: 20px;
+    background-color: rgb(187, 113, 128);
+    color: white;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    margin-top: 60px;
+}

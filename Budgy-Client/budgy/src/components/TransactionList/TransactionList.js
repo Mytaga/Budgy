@@ -19,14 +19,12 @@ export const TransactionList = () => {
 
     return (
         <Accordion>
-            <Transaction>
-                {transactions.map((transaction) => (
-                    <Transaction
-                        key={transaction.id}
-                        {...transaction}
-                    />
-                ))};
-            </Transaction>
+            {transactions.map((transaction) => (
+                <Transaction
+                    key={transaction.id}
+                    {...transaction}
+                />
+            ))};
         </Accordion>
     );
 };
