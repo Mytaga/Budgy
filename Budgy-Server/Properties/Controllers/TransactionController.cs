@@ -169,5 +169,30 @@ namespace Budgy_Server.Controllers
                 throw new ApplicationException(ExceptionErrors.ExceptionMessage, ex);
             }  
         }
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [HttpGet("categories/{type}")]
+        [Produces("application/json")]
+        [ProducesResponseType(200, StatusCode = StatusCodes.Status200OK, Type = typeof(ListTransactionCategories))]
+        [ProducesResponseType(400, StatusCode = StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> LoadCategories(string type)
+        {
+            try
+            {
+                if (type == null)
+                {
+                    return BadRequest();
+                }
+
+                var result = await this.transactionService.LoadCategoriesAsync(type);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(Constants.LoadCategories);
+                throw new ApplicationException(ExceptionErrors.ExceptionMessage, ex);
+            }
+        }
     }
 }

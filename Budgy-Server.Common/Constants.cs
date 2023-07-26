@@ -12,5 +12,6 @@
         public const string CreateTransaction = "CreateTransaction :";
         public const string UpdateTransaction = "UpdateTransaction :";
         public const string DeleteTransaction = "DeleteTransaction :";
+        public const string LoadCategories = "LoadCategories :";
     }
 }
