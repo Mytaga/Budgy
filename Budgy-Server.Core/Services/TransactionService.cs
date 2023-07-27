@@ -102,7 +102,11 @@ namespace Budgy_Server.Core.Services
                 {
                     Id = t.Id,
                     Amount = t.Amount.ToString("F2"),
+                    Type = t.Type.ToString(),
                     Time = t.Time.ToString("MM/dd/yyyy h:mm tt"),
+                    UserId = t.UserId,
+                    CategoryName = t.Category.Name,
+                    Description = t.Description,
                 })             
                 .ToListAsync();
 

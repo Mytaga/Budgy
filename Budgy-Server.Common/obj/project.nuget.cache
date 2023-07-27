@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "UfVgJ+sO2ugTRl4stKteGqG/6of6d7kdE8PG6tivthleTJsE0ya1Xt7arGqorLmEUh/NGfd9fMWaNUqX+fABYw==",
+  "dgSpecHash": "z+5MlsUBy8XO7WAmGQAgCVQJKwULJtMZDgD6GS8ilhi3+DglR+vvPT27D+0CQl02PzTbhmZjBtfUgtoObdj79g==",
   "success": true,
   "projectFilePath": "C:\\Users\\mitko\\Desktop\\Budgy\\Budgy-Server.Common\\Budgy-Server.Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mitko\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.20\\microsoft.aspnetcore.jsonpatch.6.0.20.nupkg.sha512",
+    "C:\\Users\\mitko\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.20\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.20.nupkg.sha512",
+    "C:\\Users\\mitko\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\mitko\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\mitko\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

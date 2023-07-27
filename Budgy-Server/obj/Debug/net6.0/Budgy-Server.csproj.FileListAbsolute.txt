@@ -81,3 +81,7 @@ C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\appsettings.Productio
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Budgy-Server.Common.dll
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Budgy-Server.Common.pdb
 C:\Users\mitko\Desktop\Budgy\Budgy-Server\obj\Debug\net6.0\Budgy-Server.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\mitko\Desktop\Budgy\Budgy-Server\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
