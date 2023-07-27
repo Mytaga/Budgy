@@ -1,8 +1,9 @@
 .create-form{
-    width: 30%;
-    padding: 20px;
+    width: 32%;
+    padding: 40px;
     background-color: rgb(187, 113, 128);
     color: white;
+    border-radius: 10px;
 }
 
 .wrapper{
@@ -11,4 +12,34 @@
     flex-direction: column; 
     justify-content: center;
     margin-top: 60px;
+}
+
+.header{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+    text-transform: initial;
+}
+
+.make-label{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.submit-btn{
+    background-color: white;
+    width: 30%;
+    color: rgb(187, 113, 128);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.error {
+    color:black;
+    font-family: bold;
+    text-transform: uppercase;
 }

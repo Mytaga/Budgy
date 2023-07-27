@@ -1,6 +1,7 @@
 ﻿using Budgy_Server.Core.Contracts;
 using Budgy_Server.Core.DTOs.Transaction;
 using Budgy_Server.Infrastructure.Data.Common;
+using Budgy_Server.Infrastructure.Data.Enums;
 using Budgy_Server.Infrastructure.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,7 +23,7 @@ namespace Budgy_Server.Core.Services
             var result = new Transaction
             {
                 Amount = model.Amount,
-                Type = model.Type,
+                Type = Enum.Parse<TransactionType>(model.Type),
                 Time = DateTime.UtcNow,
                 UserId = model.UserId,
                 CategoryId = model.CategoryId,
@@ -78,7 +79,7 @@ namespace Budgy_Server.Core.Services
                 Id = transaction.Id,
                 Amount = transaction.Amount.ToString("F2"),
                 Type = transaction.Type.ToString(),
-                Time = transaction.Time.ToShortTimeString(),
+                Time = transaction.Time.ToString("MM/dd/yyyy h:mm tt"),
                 UserId = transaction.UserId,
                 CategoryName = transaction.Category.Name,
                 Description = transaction.Description,
@@ -93,16 +94,16 @@ namespace Budgy_Server.Core.Services
 
             var transactions = this.repository
                 .AllReadonly<Transaction>()
-                .Where(t => t.IsDeleted == false && t.UserId == userId);
+                .Where(t => t.IsDeleted == false && t.UserId == userId)
+                .OrderByDescending(t => t.Time);
 
             result.Transactions = await transactions
                 .Select(t => new TransactionDto
                 {
                     Id = t.Id,
                     Amount = t.Amount.ToString("F2"),
-                    Time = t.Time.ToShortTimeString(),
-                })
-                .OrderByDescending(t => t.Time)
+                    Time = t.Time.ToString("MM/dd/yyyy h:mm tt"),
+                })             
                 .ToListAsync();
 
             return result;
@@ -141,7 +142,7 @@ namespace Budgy_Server.Core.Services
 
             transaction.Amount = model.Amount;
             transaction.Time = DateTime.UtcNow;
-            transaction.Type = model.Type;
+            transaction.Type = Enum.Parse<TransactionType>(model.Type);
             transaction.CategoryId = model.CategoryId;
             transaction.Description = model.Description;
 

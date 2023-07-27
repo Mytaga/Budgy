@@ -1,5 +1,6 @@
 import { Form, Button } from "react-bootstrap";
 import { useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 
 import * as transactionService from '../../services/transactionService';
@@ -11,6 +12,8 @@ export const CreateTransaction = () => {
 
     const { token, userId } = useContext(AuthContext);
 
+    const navigate = useNavigate();
+
     const [categories, setCategories] = useState([]);
 
     const [formErrors, setFormErrors] = useState({
@@ -20,7 +23,8 @@ export const CreateTransaction = () => {
     });
 
     const onTransactionCreate = async (values) => {
-        await transactionService(values, token);
+        await transactionService.addTransaction(values, token);
+        navigate('/transactions');
     };
 
     const { formValues, formChangeHandler, onSubmit } = useForm(
@@ -36,8 +40,8 @@ export const CreateTransaction = () => {
 
     useEffect(() => {
         transactionService.getCategories(transactionType, token)
-            .then(transactionCategories => {
-                setCategories(transactionCategories)
+            .then(categories => {
+                setCategories(categories)
             })
             .catch(error => console.log(error))
     }, [transactionType, token]);
@@ -50,10 +54,6 @@ export const CreateTransaction = () => {
             errors.content = 'Amoun must cannot be negative or 0';
         }
 
-        if (e.target.name === 'amount' && (value === null)) {
-            errors.content = 'Amount must be filled in';
-        }
-
         if (e.target.name === 'description' && (value.length < 5 || value.length > 100)) {
             errors.content = 'Description should be between 5 and 100 characters';
         }
@@ -64,8 +64,9 @@ export const CreateTransaction = () => {
     return (
         <div className={styles['wrapper']}>
             <Form className={styles['create-form']} onSubmit={onSubmit} method="POST">
-                <Form.Group className="mb-3">
-                    <Form.Label>Amount</Form.Label>
+            <h3 className={styles['header']}>Register Transaction</h3>
+                <Form.Group className={`${styles['make-group']} mb-3`}>
+                    <Form.Label className={styles['make-label']}>Amount</Form.Label>
                     <Form.Control type="text"
                         id="amount"
                         name="amount"
@@ -79,8 +80,8 @@ export const CreateTransaction = () => {
                         </p>
                     }
                 </Form.Group>
-                <Form.Group className="mb-3">
-                    <Form.Label>Type</Form.Label>
+                <Form.Group className={`${styles['make-group']} mb-3`}>
+                    <Form.Label className={styles['make-label']}>Type</Form.Label>
                     <Form.Select
                         id="type"
                         name="type"
@@ -92,8 +93,8 @@ export const CreateTransaction = () => {
                         <option>Expense</option>
                     </Form.Select>
                 </Form.Group>
-                <Form.Group className="mb-3">
-                    <Form.Label>Category</Form.Label>
+                <Form.Group className={`${styles['make-group']} mb-3`}>
+                    <Form.Label className={styles['make-label']}>Category</Form.Label>
                     <Form.Select
                         id="categoryId"
                         name="categoryId"
@@ -105,7 +106,22 @@ export const CreateTransaction = () => {
                         {categories.map((c) => (<option key={c.id} value={c.id}>{c.name}</option>))}
                     </Form.Select>
                 </Form.Group>
-                <Button variant="transparent" type="submit">
+                <Form.Group className={`${styles['make-group']} mb-3`}>
+                    <Form.Label className={styles['make-label']}>Description</Form.Label>
+                    <Form.Control type="textarea"
+                        id="description"
+                        name="description"
+                        placeholder="Description"
+                        value={formValues.description}
+                        onChange={formChangeHandler}
+                        onBlur={transactionFormValidate} />
+                    {formErrors.username &&
+                        <p className={`${styles['error']} form-error`}>
+                            {formErrors.description}
+                        </p>
+                    }
+                </Form.Group>
+                <Button className={styles['submit-btn']} variant="transparent" type="submit">
                     Make
                 </Button>
             </Form>

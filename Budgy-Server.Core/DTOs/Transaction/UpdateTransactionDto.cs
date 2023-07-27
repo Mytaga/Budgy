@@ -10,10 +10,7 @@ namespace Budgy_Server.Core.DTOs.Transaction
         public decimal Amount { get; set; }
 
         [Required(ErrorMessage = TransactionValidation.TypeIsRequiredErrorMsg)]
-        public TransactionType Type { get; set; }
-
-        [Required]
-        public DateTime Time { get; set; }
+        public string Type { get; set; } = null!;
 
         [Required]
         public string CategoryId { get; set; } = null!;

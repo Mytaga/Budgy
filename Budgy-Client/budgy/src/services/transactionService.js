@@ -1,7 +1,7 @@
 const baseUrl = 'https://localhost:5001/api/transaction';
 
 export const getAll = async (token) => {
-    const response = await fetch(`${baseUrl}`, {
+    const response = await fetch(`${baseUrl}/all`, {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -15,7 +15,7 @@ export const getAll = async (token) => {
 };
 
 export const getDetails = async (id, token) => {
-    const response = await fetch(`${baseUrl}/all}/${id}`, {
+    const response = await fetch(`${baseUrl}/all/${id}`, {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -36,7 +36,7 @@ export const addTransaction = async (data, token) => {
             'content-type': 'application/json',
             'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringifyd(data)
+        body: JSON.stringify(data)
     });
 
     const result = await response.json();
@@ -84,5 +84,5 @@ export const getCategories = async(type, token) => {
 
     const result = await response.json();
 
-    return result.categories;
+    return result.transactionCategories;
 }
