@@ -11,7 +11,7 @@ export const Transaction = ({
     description,
 }) => {
     return (
-        <Accordion.Item className={styles['accordion-item']}>
+        <Accordion.Item className={styles['accordion-item']} eventKey={id}>
             <Accordion.Header className={styles['accordion-header']}>{time} - {amount}lv </Accordion.Header>
             <Accordion.Body className={styles['accordion-body']}>
                 <span>Amount : {amount}lv</span>
