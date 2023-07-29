@@ -4,10 +4,6 @@
     grid-area: 6px;
 }
 
-.accordion-header{
-    color: rgb(187, 113, 128);
-}
-
 .accordion-item{
     background-color: rgb(187, 113, 128);
     color: white;

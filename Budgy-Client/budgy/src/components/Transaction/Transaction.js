@@ -12,9 +12,11 @@ export const Transaction = ({
 }) => {
     return (
         <Accordion.Item className={styles['accordion-item']} eventKey={id}>
-            <Accordion.Header className={styles['accordion-header']}>{time} - {amount}lv </Accordion.Header>
+            <Accordion.Header className={styles['accordion-head']}>
+                {time} - {amount}лв.
+            </Accordion.Header>
             <Accordion.Body className={styles['accordion-body']}>
-                <span>Amount : {amount}lv</span>
+                <span>Amount : {amount}лв.</span>
                 <span>Type : {type}</span>
                 <span>Time : {time}</span>
                 <span>Category : {categoryName}</span>

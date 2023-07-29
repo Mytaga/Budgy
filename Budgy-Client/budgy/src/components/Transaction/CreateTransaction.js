@@ -18,7 +18,6 @@ export const CreateTransaction = () => {
 
     const [formErrors, setFormErrors] = useState({
         amount: '',
-        type: '',
         description: '',
     });
 
@@ -51,7 +50,7 @@ export const CreateTransaction = () => {
         const errors = {};
 
         if (e.target.name === 'amount' && (value <= 0)) {
-            errors.content = 'Amoun must cannot be negative or 0';
+            errors.content = 'Amount cannot be negative or 0';
         }
 
         if (e.target.name === 'description' && (value.length < 5 || value.length > 100)) {
@@ -64,7 +63,7 @@ export const CreateTransaction = () => {
     return (
         <div className={styles['wrapper']}>
             <Form className={styles['create-form']} onSubmit={onSubmit} method="POST">
-            <h3 className={styles['header']}>Register Transaction</h3>
+                <h3 className={styles['header']}>Register Transaction</h3>
                 <Form.Group className={`${styles['make-group']} mb-3`}>
                     <Form.Label className={styles['make-label']}>Amount</Form.Label>
                     <Form.Control type="text"
@@ -74,7 +73,7 @@ export const CreateTransaction = () => {
                         value={formValues.amount}
                         onChange={formChangeHandler}
                         onBlur={transactionFormValidate} />
-                    {formErrors.username &&
+                    {formErrors.amount &&
                         <p className={`${styles['error']} form-error`}>
                             {formErrors.amount}
                         </p>
@@ -100,8 +99,7 @@ export const CreateTransaction = () => {
                         name="categoryId"
                         value={formValues.categoryId}
                         onChange={formChangeHandler}
-                        onBlur={transactionFormValidate}
-                    >
+                        onBlur={transactionFormValidate}>
                         <option>Category Type</option>
                         {categories.map((c) => (<option key={c.id} value={c.id}>{c.name}</option>))}
                     </Form.Select>
@@ -115,7 +113,7 @@ export const CreateTransaction = () => {
                         value={formValues.description}
                         onChange={formChangeHandler}
                         onBlur={transactionFormValidate} />
-                    {formErrors.username &&
+                    {formErrors.description &&
                         <p className={`${styles['error']} form-error`}>
                             {formErrors.description}
                         </p>
